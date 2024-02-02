@@ -1,6 +1,7 @@
 import os
 import shutil
 import time
+import tkinter
 from tqdm import tqdm
 
 def clean_path(path):
@@ -19,53 +20,25 @@ download_directory = clean_path(download_directory)
 # Dictionary mapping file extensions to corresponding subdirectories
 file_type_mapping = {
     'pdf': 'pdf',
-    'jpg': 'images',
-    'jpeg': 'images',
-    'png': 'images',
-    'mp4': 'videos',
-    'docx': 'Documents',
-    'xlsx': 'Documents',
-    'pptx': 'Documents',
-    'odp': 'Documents',
-    'txt': 'text_files',
-    'md': 'text_files',
-    'log': 'text_files',
-    'zip': 'archives',
-    'rar': 'archives',
-    'gz': 'archives',
-    'csv': 'spreadsheets',
-    'json': 'data_files',
-    'xml': 'data_files',
-    'html': 'web_pages',
-    'exe': 'executables',
-    'py': 'code_files',
-    'java': 'code_files',
-    'cpp': 'code_files',
-    'js': 'code_files',
-    'bat': 'scripts',
-    'sh': 'scripts',
-    'iso': 'disk_images',
-    'img': 'disk_images',
-    'bak': 'backup_files',
-    'dll': 'dynamic_libraries',
-    'psd': 'design_files',
-    'ai': 'design_files',
-    'mp3': 'audio_files',
-    'wav': 'audio_files',
-    'avi': 'videos',
-    'mov': 'videos',
-    'flv': 'videos',
-    'svg': 'vector_graphics',
-    'ics': 'calendar_files',
-    'dxf': 'CAD_files',
-    'webp': 'images',
-    'tex': 'LaTeX_files',
-    'deb': 'system_packages',
-    'rpm': 'system_packages',
-    'tgz': 'compressed_packages',
-    'bz2': 'compressed_packages',
-    'jar': 'java_archives',
-    # Add more file types and corresponding subdirectories as needed
+    'jpg': 'images/JPEG',
+    'jpeg': 'images/JPEG',
+    'png': 'images/PNG',
+    'svg': 'images/SVG',
+    'mp4': 'videos/MP4',
+    'docx': 'Documents/Doc',
+    'xlsx': 'Documents/Excel',
+    'pptx': 'Documents/PowerPoint',
+    'odp': 'Documents/Doc',
+    'zip': 'archives/ZIP',
+    'rar': 'archives/RAR',
+    'gz': 'archives/GZ',
+    'csv': 'Documents/Excel',
+    'mp3': 'audio_files/MP3',
+    'wav': 'audio_files/WAV',
+    'avi': 'videos/AVI',
+    'mov': 'videos/MOV',
+    'flv': 'videos/FLV',
+    'webp': 'images/WEBP'
 }
 
 def organize_files():
